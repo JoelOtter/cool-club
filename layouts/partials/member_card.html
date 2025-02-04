@@ -1,0 +1,12 @@
+<div class="member">
+  <hr>
+  <h3>{{ .Title }}</h3>
+  <a href="{{ .Path }}">{{ partial "image.html" . }}</a>
+  <p>{{ .Content }}</p>
+  <p>
+    <a href="{{ .Params.site }}">Site</a>
+    {{- if .Params.feed -}}
+    &nbsp;| <a href="{{ path.Join .Params.site .Params.feed }}">Feed</a>
+    {{- end -}}
+  </p>
+</div>

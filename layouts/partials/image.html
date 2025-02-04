@@ -1,0 +1,8 @@
+<img
+  {{ if hasPrefix .Params.image "/" }}
+  src="{{ path.Join .Params.site .Params.image }}"
+  {{- else -}}
+  src="{{ .Params.image }}"
+  {{- end -}}
+  style="max-width: 100%; max-height: 10rem"
+  />

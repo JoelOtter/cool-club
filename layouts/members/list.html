@@ -1,0 +1,9 @@
+{{ define "main" }}
+
+{{ .Content }}
+
+{{ range $idx, $member := .Pages }}
+  {{ partial "member_card.html" $member }}
+{{ end }}
+
+{{ end }}

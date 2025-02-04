@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+  {{ partial "head.html" . }}
+
+  <body>
+    <header>
+      <h1>🧊 Club</h1>
+    </header>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/members">Members</a>
+      <a href="/join">Join</a>
+    </nav>
+
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+
+  </body>
+
+</html>

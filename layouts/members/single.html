@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+{{ $pages := .CurrentSection.Pages.ByWeight.Reverse }}
+{{ $last := index $pages (sub (len $pages) 1) }}
+{{ $first := index $pages 0 }}
+
+{{ $prev := $first }}
+{{ $next := $last }}
+{{ with $pages.Prev . }}
+{{ $prev = . }}
+{{ end }}
+{{ with $pages.Next . }}
+{{ $next = . }}
+{{ end }}
+
+<script type="text/javascript">
+  window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('next')) {
+      window.location.replace("{{ $next.Params.site }}");
+    } else if (urlParams.has('prev')) {
+      window.location.replace("{{ $prev.Params.site }}");
+    }
+  }
+</script>
+
+<h1>{{ .Title }}</h2>
+{{ partial "image.html" . }}
+
+{{ .Content }}
+
+<p>
+  <a href="{{ .Params.site }}">Site</a>
+  {{- if .Params.feed -}}
+  &nbsp;| <a href="{{ path.Join .Params.site .Params.feed }}">Feed</a>
+  {{- end -}}
+</p>
+
+<hr>
+
+<p style="text-align: center; font-size: 2em;">
+  <a href="{{ $prev.RelPermalink }}" style="text-decoration: none">⬅️</a>
+  <a href="/" style="text-decoration: none">🧊</a>
+  <a href="{{ $next.RelPermalink }}" style="text-decoration: none">➡️</a>
+</p>
+
+{{ end }}

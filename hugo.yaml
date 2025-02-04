@@ -1,0 +1,9 @@
+baseURL: 'https://join-the-cool.club'
+languageCode: 'en-gb'
+title: '🧊 Club'
+disableKinds:
+  - taxonomy
+
+markup:
+  highlight:
+    noClasses: false
