@@ -6,7 +6,7 @@
   <p>
     <a href="{{ .Params.site }}">Site</a>
     {{- if .Params.feed -}}
-    &nbsp;| <a href="{{ path.Join .Params.site .Params.feed }}">Feed</a>
+    &nbsp;| <a href="{{ urls.JoinPath .Params.site .Params.feed }}">Feed</a>
     {{- end -}}
   </p>
 </div>

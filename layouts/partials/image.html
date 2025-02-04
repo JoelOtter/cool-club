@@ -1,6 +1,6 @@
 <img
   {{ if hasPrefix .Params.image "/" }}
-  src="{{ path.Join .Params.site .Params.image }}"
+  src="{{ urls.JoinPath .Params.site .Params.image }}"
   {{- else -}}
   src="{{ .Params.image }}"
   {{- end -}}
