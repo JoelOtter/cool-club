@@ -1,0 +1,34 @@
+<!doctype html><html lang=en-gb><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>Join | 🧊 Club</title>
+<link rel=stylesheet href=/readable.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin=anonymous referrerpolicy=no-referrer></head><body><header><h1>🧊 Club</h1></header><nav><a href=/>Home</a>
+<a href=/members>Members</a>
+<a href=/join>Join</a></nav><main><p>🧊 Club is a very cool webring, and you can be part of it if you like.</p><h2 id=what-a-webring-is>What a webring is</h2><p>If you&rsquo;re in the webring, your website is listed on this website. You&rsquo;ll also
+have a little set of buttons on your website like this:</p><p>⬅️🧊➡️</p><p>These will let visitors to your website click between sites in the webring,
+hopefully discovering other cool websites and leading cool folks to discover
+your cool website in turn.</p><h2 id=rules>Rules</h2><p>We do have some rules about what kind of sites we would like to be in the
+webring:</p><ul><li>Any form of hate is, obviously, not allowed.</li><li>It must be a personal website that you own and is for you, not a company or
+something.</li><li>You must display the buttons on your website, otherwise you&rsquo;ll break the
+chain!</li><li>We don&rsquo;t want any content that is pro-crypto, generative AI, web3, etc. The
+point of the personal web is to get away from this stuff.</li><li>We reserve the right to remove any dead links from the webring.</li><li>We strongly prefer blogs to be part of the webring, ideally ones updated
+somewhat regularly, but we&rsquo;re prepared to bend this rule if your site is really
+cool.</li></ul><h2 id=how-to-join>How to join</h2><p>Create an <a href=https://github.com/JoelOtter/cool-club/issues>issue</a> in our GitHub
+repo (or a PR if you&rsquo;re feeling brave). The info we need looks like this:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=nn>---</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=c># Your name or website name</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Joel Auterson</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=c># The next number in the chain (we can give you this)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>weight</span><span class=p>:</span><span class=w> </span><span class=m>2</span><span class=w> 
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=c># Your website</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>site</span><span class=p>:</span><span class=w> </span><span class=l>https://joelotter.com </span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=c># An image. This can be a relative URL if hosted on your</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=c># site, or an absolute URL for one from elsewhere.</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>image</span><span class=p>:</span><span class=w> </span><span class=l>/img/profile.jpg </span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=c># (Optional) The RSS feed on your website, if you have one.</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>feed</span><span class=p>:</span><span class=w> </span><span class=l>/posts/index.xml</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nn>---</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=l>A description of your site, in a few sentences.</span><span class=w>
+</span></span></span></code></pre></div><p>The file should be <code>yourname.md</code>, e.g. <code>joel.md</code> or <code>pat.md</code>.</p><p>To be added, you also need to add the buttons to your website:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>a</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;https://join-the-cool.club/members/yourname?prev&#34;</span> <span class=na>style</span><span class=o>=</span><span class=s>&#34;text-decoration: none&#34;</span><span class=p>&gt;</span>⬅️<span class=p>&lt;/</span><span class=nt>a</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>a</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;https://join-the-cool.club/members/yourname&#34;</span> <span class=na>style</span><span class=o>=</span><span class=s>&#34;text-decoration: none&#34;</span><span class=p>&gt;</span>🧊<span class=p>&lt;/</span><span class=nt>a</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>a</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;https://join-the-cool.club/members/yourname?next&#34;</span> <span class=na>style</span><span class=o>=</span><span class=s>&#34;text-decoration: none&#34;</span><span class=p>&gt;</span>➡️<span class=p>&lt;/</span><span class=nt>a</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
+</span></span></code></pre></div><p>And you&rsquo;re done. Welcome to 🧊 Club!</p></main></body></html>
