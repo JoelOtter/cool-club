@@ -1,6 +1,2 @@
-{{- $pages := .CurrentSection.Pages.ByLastmod }}
-{{- $next := index $pages (sub (len $pages) 1) }}
-{{- with $pages.Next . }}
-    {{- $next = . }}
-{{- end }}
+{{- $next := partial "next_page.html" . }}
 {{ partial "redirect.html" $next }}

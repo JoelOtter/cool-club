@@ -1,17 +1,7 @@
 {{ define "main" }}
 
-{{- $pages := .CurrentSection.Pages.ByLastmod }}
-{{- $last := index $pages (sub (len $pages) 1) }}
-{{- $first := index $pages 0 }}
-
-{{- $prev := $first }}
-{{- $next := $last }}
-{{- with $pages.Prev . }}
-  {{- $prev = . }}
-{{- end }}
-{{- with $pages.Next . }}
-  {{- $next = . }}
-{{- end }}
+{{- $prev := partial "prev_page.html" . }}
+{{- $next := partial "next_page.html" . }}
 
 <script type="text/javascript">
   const urlParams = new URLSearchParams(window.location.search);

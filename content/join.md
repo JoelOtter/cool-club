@@ -41,6 +41,8 @@ repo (or a PR if you're feeling brave). The info we need looks like this:
 ---
 # Your name or website name
 name: Joel Auterson
+# The next number in the chain (we can give you this)
+weight: 2 
 # Your website
 site: https://joelotter.com 
 # An image. This can be a relative URL if hosted on your

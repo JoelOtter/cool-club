@@ -1,0 +1,6 @@
+{{- $pages := partial "member_page_list.html" }}
+{{- $prev := index $pages (sub (len $pages) 1) }}
+{{- with $pages.Prev . }}
+  {{- $prev = . }}
+{{- end }}
+{{- return $prev }}

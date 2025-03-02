@@ -8,12 +8,6 @@ markup:
   highlight:
     noClasses: false
 
-outputs:
-  page:
-    - html
-    - next_link
-    - prev_link
-
 outputFormats:
   next_link:
     baseName: next
