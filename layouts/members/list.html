@@ -2,7 +2,7 @@
 
 {{ .Content }}
 
-{{ range $idx, $member := .Pages }}
+{{ range $idx, $member := .Pages.ByLastmod }}
   {{ partial "member_card.html" $member }}
 {{ end }}
 

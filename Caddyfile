@@ -1,0 +1,11 @@
+localhost {
+	root public
+
+	rewrite /favicon.ico /icons/favicon.ico
+	try_files {uri} {uri}.html
+
+	file_server {
+		index index.html
+	}
+}
+

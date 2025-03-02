@@ -1,0 +1,6 @@
+{{- $pages := .CurrentSection.Pages.ByLastmod }}
+{{- $prev := index $pages 0 }}
+{{- with $pages.Prev . }}
+    {{- $prev = . }}
+{{- end }}
+{{ partial "redirect.html" $prev }}

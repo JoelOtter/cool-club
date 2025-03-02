@@ -1,5 +1,10 @@
 ---
 title: Members
+cascade:
+  outputs:
+  - html
+  - next_link
+  - prev_link
 ---
 
 Here is a list of all our members.

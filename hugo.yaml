@@ -7,3 +7,26 @@ disableKinds:
 markup:
   highlight:
     noClasses: false
+
+outputs:
+  page:
+    - html
+    - next_link
+    - prev_link
+
+outputFormats:
+  next_link:
+    baseName: next
+    mediaType: text/html
+    isHTML: true
+  prev_link:
+    baseName: prev
+    mediaType: text/html
+    isHTML: true
+
+enableGitInfo: true
+
+frontmatter:
+  lastmod:
+  - ':git'
+  - ':fileModTime'

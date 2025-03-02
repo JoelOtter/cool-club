@@ -1,26 +1,24 @@
 {{ define "main" }}
 
-{{ $pages := .CurrentSection.Pages.ByWeight.Reverse }}
-{{ $last := index $pages (sub (len $pages) 1) }}
-{{ $first := index $pages 0 }}
+{{- $pages := .CurrentSection.Pages.ByLastmod }}
+{{- $last := index $pages (sub (len $pages) 1) }}
+{{- $first := index $pages 0 }}
 
-{{ $prev := $first }}
-{{ $next := $last }}
-{{ with $pages.Prev . }}
-{{ $prev = . }}
-{{ end }}
-{{ with $pages.Next . }}
-{{ $next = . }}
-{{ end }}
+{{- $prev := $first }}
+{{- $next := $last }}
+{{- with $pages.Prev . }}
+  {{- $prev = . }}
+{{- end }}
+{{- with $pages.Next . }}
+  {{- $next = . }}
+{{- end }}
 
 <script type="text/javascript">
-  window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('next')) {
-      window.location.replace("{{ $next.Params.site }}");
-    } else if (urlParams.has('prev')) {
-      window.location.replace("{{ $prev.Params.site }}");
-    }
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.has('next')) {
+    window.location.replace("{{ $next.Params.site }}");
+  } else if (urlParams.has('prev')) {
+    window.location.replace("{{ $prev.Params.site }}");
   }
 </script>
 
