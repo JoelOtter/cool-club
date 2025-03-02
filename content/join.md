@@ -62,9 +62,9 @@ To be added, you also need to add the buttons to your website:
 
 ```html
 <p>
-  <a href="https://join-the-cool.club/members/yourname?prev" style="text-decoration: none">⬅️</a>
+  <a href="https://join-the-cool.club/members/yourname/prev" style="text-decoration: none">⬅️</a>
   <a href="https://join-the-cool.club/members/yourname" style="text-decoration: none">🧊</a>
-  <a href="https://join-the-cool.club/members/yourname?next" style="text-decoration: none">➡️</a>
+  <a href="https://join-the-cool.club/members/yourname/next" style="text-decoration: none">➡️</a>
 </p>
 ```
 

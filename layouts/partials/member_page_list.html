@@ -1,0 +1,2 @@
+{{ $members_section := where site.RegularPages "Section" "members" }}
+{{ return $members_section.ByWeight.Reverse }}

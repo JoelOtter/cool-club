@@ -2,7 +2,8 @@
 
 {{ .Content }}
 
-{{ range $idx, $member := .Pages }}
+{{- $pages := partial "member_page_list.html" }}
+{{ range $idx, $member := $pages }}
   {{ partial "member_card.html" $member }}
 {{ end }}
 
